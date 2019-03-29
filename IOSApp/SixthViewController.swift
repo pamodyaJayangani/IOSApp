@@ -79,10 +79,9 @@ class SixthViewController: UIViewController {
         ukPintValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 568.261)
         fluidOunceValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 28.413)
         
-        print("----++++++ \(SecondViewController.GlobalVar.arr[0])")
-        
-
-        
+        print("=============\(SecondViewController.GlobalVar.arr[0])")
+        print("=============+++\(SecondViewController.GlobalVar.arr[1])")
+//        print("=============***\(SecondViewController.GlobalVar.arr[2])")
         
     }
     

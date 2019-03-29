@@ -15,10 +15,31 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    struct GlobalVar {
+//    struct Queue {
+//        var arr:[String]  = []
+//
+//        mutating func enqueue(element: String){
+//            arr.append(element)
+//        }
+//
+//        mutating func dequeue(){
+//            if arr.count == 25{
+//                arr.remove(at: 0)
+//            }
+//        }
+//    }
+    
+    struct GlobalVar{
         static var arr: [String] = []
     }
-    
+    func checkArrList(){
+        print("######### \(GlobalVar.arr.endIndex)")
+        if(GlobalVar.arr.endIndex >= 25){
+            print("***********^^^^^\(GlobalVar.arr[0]) ")
+            GlobalVar.arr.remove(at: 0)
+        }
+    }
+
     
     @IBOutlet weak var kgValue: UITextField!
     @IBOutlet weak var gramValue: UITextField!
@@ -66,17 +87,35 @@ class SecondViewController: UIViewController {
     
     @IBAction func saveKg(_ sender: Any) {
         if let value = kgValue.text{ UserDefaults.standard.set(value, forKey: "kgValue")
-        
+//            SecondViewController.Queue.enqueue(element: value)
+            checkArrList()
             GlobalVar.arr.append(value)
         }
+        if let value = gramValue.text{ UserDefaults.standard.set(value, forKey: "gramValue")
         
-        
-        
+            checkArrList()
+            GlobalVar.arr.append(value)
+        }
+        if let value = ouncesValue.text{ UserDefaults.standard.set(value, forKey: "ouncesValue")
+                
+                checkArrList()
+                GlobalVar.arr.append(value)
+        }
+        if let value = poundsValue.text{ UserDefaults.standard.set(value, forKey: "poundsValue")
+            
+            checkArrList()
+            GlobalVar.arr.append(value)
+        }
+        if let value = stonePoundsValue.text{ UserDefaults.standard.set(value, forKey: "stonePoundsValue")
+            
+            checkArrList()
+            GlobalVar.arr.append(value)
+        }
     }
     
-    @IBAction func retreiveKg(_ sender: Any) {
-        let value = UserDefaults.standard.string(forKey: "kgValue")
-        gramValue.text = value
-    }
+//    @IBAction func retreiveKg(_ sender: Any) {
+//        let value = UserDefaults.standard.string(forKey: "kgValue")
+//        gramValue.text = value
+//    }
 }
 
