@@ -15,6 +15,11 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    struct GlobalVar {
+        static var arr: [String] = []
+    }
+    
+    
     @IBOutlet weak var kgValue: UITextField!
     @IBOutlet weak var gramValue: UITextField!
     @IBOutlet weak var ouncesValue: UITextField!
@@ -56,6 +61,22 @@ class SecondViewController: UIViewController {
         gramValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 6350.293)
         ouncesValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)!  * 224.0)
         poundsValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 14.0)
+    }
+    
+    
+    @IBAction func saveKg(_ sender: Any) {
+        if let value = kgValue.text{ UserDefaults.standard.set(value, forKey: "kgValue")
+        
+            GlobalVar.arr.append(value)
+        }
+        
+        
+        
+    }
+    
+    @IBAction func retreiveKg(_ sender: Any) {
+        let value = UserDefaults.standard.string(forKey: "kgValue")
+        gramValue.text = value
     }
 }
 
