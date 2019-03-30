@@ -114,8 +114,11 @@ class SecondViewController: UIViewController {
     }
     
 //    @IBAction func retreiveKg(_ sender: Any) {
-//        let value = UserDefaults.standard.string(forKey: "kgValue")
-//        gramValue.text = value
-//    }
+//
+////        let value = UserDefaults.standard.string(forKey: "kgValue")
+////        gramValue.text = value
+//
+//}
+
 }
 
