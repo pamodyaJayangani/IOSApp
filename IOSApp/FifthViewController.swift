@@ -62,5 +62,17 @@ class FifthViewController: UIViewController {
         milesHourValue.text = String(format: "%.4f", Double(nauticalMilesHourValue.text!)! * 1.852)
     }
     
+    func checkArrList(){
+        
+        if(GlobalVar.GlobalSpeed.speedArr.endIndex >= 5){
+            GlobalVar.GlobalSpeed.speedArr.remove(at: 0)
+        }
+    }
     
+    
+    @IBAction func saveSpeed(_ sender: Any) {
+        checkArrList()
+        var value: String = "\(meterSecValue.text!)m/s = \(kmhValue.text!)km/h = \(milesHourValue.text!)mile/h = \(nauticalMilesHourValue.text!)nMile/h"
+        GlobalVar.GlobalSpeed.speedArr.append(value)
+    }
 }

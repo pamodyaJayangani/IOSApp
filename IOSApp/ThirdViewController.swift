@@ -49,8 +49,19 @@ class ThirdViewController: UIViewController {
         farenheitValue.text = String(format: "%.4f", (Double(kelvinValue.text!)! - 273.15) * 9/5 + 32)
     }
     
+    func checkArrList(){
+
+        if(GlobalVar.GlobalTemp.tempArr.endIndex >= 5){
+            GlobalVar.GlobalTemp.tempArr.remove(at: 0)
+        }
+    }
     
     
+    @IBAction func saveTemp(_ sender: Any) {
+        checkArrList()
+        var value: String = "\(celciusValue.text!)cel = \(farenheitValue.text!)far = \(kelvinValue.text!)K"
+        GlobalVar.GlobalTemp.tempArr.append(value)
+    }
     
     
     

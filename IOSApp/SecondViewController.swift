@@ -29,14 +29,12 @@ class SecondViewController: UIViewController {
 //        }
 //    }
     
-    struct GlobalVar{
-        static var arr: [String] = []
-    }
+    
     func checkArrList(){
-        print("######### \(GlobalVar.arr.endIndex)")
-        if(GlobalVar.arr.endIndex >= 25){
-            print("***********^^^^^\(GlobalVar.arr[0]) ")
-            GlobalVar.arr.remove(at: 0)
+        print("######### \(GlobalVar.GlobalArr.arr.endIndex)")
+        if(GlobalVar.GlobalArr.arr.endIndex >= 5){
+            print("***********^^^^^\(GlobalVar.GlobalArr.arr[0]) ")
+            GlobalVar.GlobalArr.arr.remove(at: 0)
         }
     }
 
@@ -86,39 +84,12 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func saveKg(_ sender: Any) {
-        if let value = kgValue.text{ UserDefaults.standard.set(value, forKey: "kgValue")
-//            SecondViewController.Queue.enqueue(element: value)
-            checkArrList()
-            GlobalVar.arr.append(value)
-        }
-        if let value = gramValue.text{ UserDefaults.standard.set(value, forKey: "gramValue")
-        
-            checkArrList()
-            GlobalVar.arr.append(value)
-        }
-        if let value = ouncesValue.text{ UserDefaults.standard.set(value, forKey: "ouncesValue")
-                
-                checkArrList()
-                GlobalVar.arr.append(value)
-        }
-        if let value = poundsValue.text{ UserDefaults.standard.set(value, forKey: "poundsValue")
-            
-            checkArrList()
-            GlobalVar.arr.append(value)
-        }
-        if let value = stonePoundsValue.text{ UserDefaults.standard.set(value, forKey: "stonePoundsValue")
-            
-            checkArrList()
-            GlobalVar.arr.append(value)
-        }
+        checkArrList()
+        let value:String = "\(kgValue.text!)kg=\(gramValue.text!)g=\(ouncesValue.text!)ounces=\(poundsValue.text!)pounds=\(stonePoundsValue.text!)stones"
+        GlobalVar.GlobalArr.arr.append(value)
     }
     
-//    @IBAction func retreiveKg(_ sender: Any) {
-//
-////        let value = UserDefaults.standard.string(forKey: "kgValue")
-////        gramValue.text = value
-//
-//}
-
+    
+    
 }
 

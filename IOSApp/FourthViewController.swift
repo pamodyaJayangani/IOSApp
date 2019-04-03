@@ -89,4 +89,16 @@ class FourthViewController: UIViewController {
         yardValue.text = String(format: "%.4f", Double(inchValue.text!)! / 36)
     }
     
+    func checkArrList(){
+        if(GlobalVar.GlobalLength.lengArr.endIndex >= 5){
+            GlobalVar.GlobalLength.lengArr.remove(at: 0)
+        }
+    }
+    
+    @IBAction func saveLength(_ sender: Any) {
+        checkArrList()
+        var value: String = "\(meterValue.text!)m = \(mileValue.text!)mile = \(centimeterValue.text!)cm = \(milimeterValue.text!)mm = \(yardValue.text!)yard = \(inchValue.text!)inch"
+        GlobalVar.GlobalLength.lengArr.append(value)
+    }
+    
 }

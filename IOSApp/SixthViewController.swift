@@ -79,10 +79,19 @@ class SixthViewController: UIViewController {
         ukPintValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 568.261)
         fluidOunceValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 28.413)
         
-        print("=============\(SecondViewController.GlobalVar.arr[0])")
-        print("=============+++\(SecondViewController.GlobalVar.arr[1])")
-//        print("=============***\(SecondViewController.GlobalVar.arr[2])")
-        
     }
     
+    func checkArrList(){
+        
+        if(GlobalVar.GlobalVolume.volumeArr.endIndex >= 5){
+            GlobalVar.GlobalVolume.volumeArr.remove(at: 0)
+        }
+    }
+
+    
+    @IBAction func saveVolume(_ sender: Any) {
+        checkArrList()
+        var value: String = "\(gallonValue.text!)gal = \(literValue.text!)l = \(ukPintValue.text!)pint = \(fluidOunceValue.text!)ounces"
+        GlobalVar.GlobalVolume.volumeArr.append(value)
+    }
 }
