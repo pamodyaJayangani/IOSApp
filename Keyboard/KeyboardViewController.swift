@@ -24,7 +24,7 @@ class KeyboardViewController: UIInputViewController {
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
 
-        self.nextKeyboardButton.setTitle(NSLocalizedString("<=", comment: "Title for 'Next Keyboard' button"), for: [])
+        self.nextKeyboardButton.setTitle(NSLocalizedString("ABC", comment: "Title for 'Next Keyboard' button"), for: [])
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -48,14 +48,10 @@ class KeyboardViewController: UIInputViewController {
         if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
             textColor = UIColor.white
         } else {
-            textColor = UIColor.black
+            textColor = UIColor.white
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-
-//    @IBAction func clickActionOne(_ sender: Any) {
-//        self.textDocumentProxy.insertText("1")
-//    }
     
     @IBAction func clickOnOne(_ sender: Any) {
         self.textDocumentProxy.insertText("1")
@@ -97,15 +93,29 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func clickOnNine(_ sender: Any) {
         self.textDocumentProxy.insertText("9")
+        
     }
     
     
     @IBAction func clickOnZero(_ sender: Any) {
         self.textDocumentProxy.insertText("0")
+        
     }
     
     
     
+    @IBAction func clickOnDecimalPoint(_ sender: Any) {
+        self.textDocumentProxy.insertText(".")
+    }
     
+    
+    @IBAction func clickOnNegate(_ sender: Any) {
+        self.textDocumentProxy.insertText("-")
+    }
+    
+    
+    @IBAction func clickOnDel(_ sender: Any) {
+        self.textDocumentProxy.deleteBackward()
+    }
     
 }
