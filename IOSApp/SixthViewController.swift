@@ -91,7 +91,7 @@ class SixthViewController: UIViewController {
     
     @IBAction func saveVolume(_ sender: Any) {
         checkArrList()
-        var value: String = "\(gallonValue.text!)gal = \(literValue.text!)l = \(ukPintValue.text!)pint = \(fluidOunceValue.text!)ounces"
+        var value: String = "\(gallonValue.text!)gal = \(literValue.text!)l = \(ukPintValue.text!)pint = \(fluidOunceValue.text!)ounces = \(mililiterValue.text!)ml"
         GlobalVar.GlobalVolume.volumeArr.append(value)
     }
 }

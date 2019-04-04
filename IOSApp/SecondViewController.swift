@@ -48,10 +48,15 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func convertKg(_ sender: Any) {
-        gramValue.text = String(format: "%.4f", Double(kgValue.text!)! * 1000)
-        ouncesValue.text = String(format: "%.4f", Double(kgValue.text!)! * 35.274)
-        poundsValue.text = String(format: "%.4f", Double(kgValue.text!)! * 2.205)
-        stonePoundsValue.text = String(format: "%.4f", Double(kgValue.text!)! / 6.35)
+        guard let value: String = kgValue.text! else{
+            print("Guard ==========")
+           return
+        }
+        gramValue.text = String(format: "%.4f", Double(value)! * 1000)
+        ouncesValue.text = String(format: "%.4f", Double(value)! * 35.274)
+        poundsValue.text = String(format: "%.4f", Double(value)! * 2.205)
+        stonePoundsValue.text = String(format: "%.4f", Double(value)! / 6.35)
+        
     }
     @IBAction func convertGrams(_ sender: Any) {
         kgValue.text = String(format: "%.4f", Double(gramValue.text!)! / 1000)
