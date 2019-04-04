@@ -14,6 +14,19 @@
 		4FEFDCDE224DDC7B00F3E3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */; };
 		4FEFDCE1224DDC7B00F3E3C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDF224DDC7B00F3E3C3 /* LaunchScreen.storyboard */; };
 		4FEFDCEC224DDC7B00F3E3C3 /* IOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCEB224DDC7B00F3E3C3 /* IOSAppTests.swift */; };
+		4FEFDCF7224DECCC00F3E3C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */; };
+		4FEFDCF9224DF2DA00F3E3C3 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */; };
+		4FEFDCFB224DFB3000F3E3C3 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */; };
+		4FEFDCFD224E060400F3E3C3 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */; };
+		4FEFDD03224F0FCE00F3E3C3 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */; };
+		4FEFDD05225332DF00F3E3C3 /* GlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */; };
+		4FEFDD0922537B2B00F3E3C3 /* TemperatureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */; };
+		4FEFDD0B2253C37900F3E3C3 /* LengthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */; };
+		4FEFDD0D2253C7CB00F3E3C3 /* SpeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0C2253C7CB00F3E3C3 /* SpeedTableViewController.swift */; };
+		4FEFDD0F2253CEC300F3E3C3 /* VolumeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0E2253CEC300F3E3C3 /* VolumeTableViewController.swift */; };
+		4FEFDD172253D11200F3E3C3 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD162253D11200F3E3C3 /* KeyboardViewController.swift */; };
+		4FEFDD1B2253D11200F3E3C3 /* Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FEFDD142253D11200F3E3C3 /* Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4FEFDD212253D13F00F3E3C3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDD202253D13F00F3E3C3 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +37,28 @@
 			remoteGlobalIDString = 4FEFDCD0224DDC7900F3E3C3;
 			remoteInfo = IOSApp;
 		};
+		4FEFDD192253D11200F3E3C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FEFDCC9224DDC7900F3E3C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FEFDD132253D11200F3E3C3;
+			remoteInfo = Keyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FEFDD1F2253D11200F3E3C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4FEFDD1B2253D11200F3E3C3 /* Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4FEFDCD1224DDC7900F3E3C3 /* IOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +72,20 @@
 		4FEFDCE7224DDC7B00F3E3C3 /* IOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEFDCEB224DDC7B00F3E3C3 /* IOSAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppTests.swift; sourceTree = "<group>"; };
 		4FEFDCED224DDC7C00F3E3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVar.swift; sourceTree = "<group>"; };
+		4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDD0C2253C7CB00F3E3C3 /* SpeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDD0E2253CEC300F3E3C3 /* VolumeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDD142253D11200F3E3C3 /* Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEFDD162253D11200F3E3C3 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4FEFDD182253D11200F3E3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FEFDD202253D13F00F3E3C3 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FEFDD112253D11200F3E3C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +118,7 @@
 			children = (
 				4FEFDCD3224DDC7900F3E3C3 /* IOSApp */,
 				4FEFDCEA224DDC7B00F3E3C3 /* IOSAppTests */,
+				4FEFDD152253D11200F3E3C3 /* Keyboard */,
 				4FEFDCD2224DDC7900F3E3C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +128,7 @@
 			children = (
 				4FEFDCD1224DDC7900F3E3C3 /* IOSApp.app */,
 				4FEFDCE7224DDC7B00F3E3C3 /* IOSAppTests.xctest */,
+				4FEFDD142253D11200F3E3C3 /* Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +143,16 @@
 				4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */,
 				4FEFDCDF224DDC7B00F3E3C3 /* LaunchScreen.storyboard */,
 				4FEFDCE2224DDC7B00F3E3C3 /* Info.plist */,
+				4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */,
+				4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */,
+				4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */,
+				4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */,
+				4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */,
+				4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */,
+				4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */,
+				4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */,
+				4FEFDD0C2253C7CB00F3E3C3 /* SpeedTableViewController.swift */,
+				4FEFDD0E2253CEC300F3E3C3 /* VolumeTableViewController.swift */,
 			);
 			path = IOSApp;
 			sourceTree = "<group>";
@@ -99,6 +166,16 @@
 			path = IOSAppTests;
 			sourceTree = "<group>";
 		};
+		4FEFDD152253D11200F3E3C3 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4FEFDD162253D11200F3E3C3 /* KeyboardViewController.swift */,
+				4FEFDD182253D11200F3E3C3 /* Info.plist */,
+				4FEFDD202253D13F00F3E3C3 /* Storyboard.storyboard */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,10 +186,12 @@
 				4FEFDCCD224DDC7900F3E3C3 /* Sources */,
 				4FEFDCCE224DDC7900F3E3C3 /* Frameworks */,
 				4FEFDCCF224DDC7900F3E3C3 /* Resources */,
+				4FEFDD1F2253D11200F3E3C3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4FEFDD1A2253D11200F3E3C3 /* PBXTargetDependency */,
 			);
 			name = IOSApp;
 			productName = IOSApp;
@@ -137,6 +216,23 @@
 			productReference = 4FEFDCE7224DDC7B00F3E3C3 /* IOSAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4FEFDD132253D11200F3E3C3 /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FEFDD1C2253D11200F3E3C3 /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				4FEFDD102253D11200F3E3C3 /* Sources */,
+				4FEFDD112253D11200F3E3C3 /* Frameworks */,
+				4FEFDD122253D11200F3E3C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = 4FEFDD142253D11200F3E3C3 /* Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +249,9 @@
 					4FEFDCE6224DDC7B00F3E3C3 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 4FEFDCD0224DDC7900F3E3C3;
+					};
+					4FEFDD132253D11200F3E3C3 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -171,6 +270,7 @@
 			targets = (
 				4FEFDCD0224DDC7900F3E3C3 /* IOSApp */,
 				4FEFDCE6224DDC7B00F3E3C3 /* IOSAppTests */,
+				4FEFDD132253D11200F3E3C3 /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +293,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FEFDD122253D11200F3E3C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEFDD212253D13F00F3E3C3 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -200,9 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FEFDD05225332DF00F3E3C3 /* GlobalVar.swift in Sources */,
+				4FEFDCFB224DFB3000F3E3C3 /* FifthViewController.swift in Sources */,
+				4FEFDCFD224E060400F3E3C3 /* SixthViewController.swift in Sources */,
+				4FEFDD03224F0FCE00F3E3C3 /* FirstTableViewController.swift in Sources */,
+				4FEFDD0D2253C7CB00F3E3C3 /* SpeedTableViewController.swift in Sources */,
 				4FEFDCD9224DDC7900F3E3C3 /* SecondViewController.swift in Sources */,
+				4FEFDD0F2253CEC300F3E3C3 /* VolumeTableViewController.swift in Sources */,
 				4FEFDCD5224DDC7900F3E3C3 /* AppDelegate.swift in Sources */,
+				4FEFDCF7224DECCC00F3E3C3 /* ThirdViewController.swift in Sources */,
 				4FEFDCD7224DDC7900F3E3C3 /* FirstViewController.swift in Sources */,
+				4FEFDCF9224DF2DA00F3E3C3 /* FourthViewController.swift in Sources */,
+				4FEFDD0922537B2B00F3E3C3 /* TemperatureTableViewController.swift in Sources */,
+				4FEFDD0B2253C37900F3E3C3 /* LengthTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +332,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FEFDD102253D11200F3E3C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEFDD172253D11200F3E3C3 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,6 +347,11 @@
 			isa = PBXTargetDependency;
 			target = 4FEFDCD0224DDC7900F3E3C3 /* IOSApp */;
 			targetProxy = 4FEFDCE8224DDC7B00F3E3C3 /* PBXContainerItemProxy */;
+		};
+		4FEFDD1A2253D11200F3E3C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FEFDD132253D11200F3E3C3 /* Keyboard */;
+			targetProxy = 4FEFDD192253D11200F3E3C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -363,6 +494,7 @@
 		4FEFDCF1224DDC7C00F3E3C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +515,7 @@
 		4FEFDCF2224DDC7C00F3E3C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -440,6 +573,46 @@
 			};
 			name = Release;
 		};
+		4FEFDD1D2253D11200F3E3C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pamodyaD.IOSApp.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FEFDD1E2253D11200F3E3C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pamodyaD.IOSApp.Keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -466,6 +639,15 @@
 			buildConfigurations = (
 				4FEFDCF4224DDC7C00F3E3C3 /* Debug */,
 				4FEFDCF5224DDC7C00F3E3C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FEFDD1C2253D11200F3E3C3 /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FEFDD1D2253D11200F3E3C3 /* Debug */,
+				4FEFDD1E2253D11200F3E3C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
