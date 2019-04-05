@@ -14,21 +14,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-//    struct Queue {
-//        var arr:[String]  = []
-//
-//        mutating func enqueue(element: String){
-//            arr.append(element)
-//        }
-//
-//        mutating func dequeue(){
-//            if arr.count == 25{
-//                arr.remove(at: 0)
-//            }
-//        }
-//    }
-    
     
     func checkArrList(){
         print("######### \(GlobalVar.GlobalArr.arr.endIndex)")
@@ -45,46 +30,67 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var poundsValue: UITextField!
     @IBOutlet weak var stonePoundsValue: UITextField!
     
-    
+    func clearData(){
+        kgValue.text = ""
+        gramValue.text = ""
+        ouncesValue.text = ""
+        poundsValue.text = ""
+        stonePoundsValue.text = ""
+    }
     
     @IBAction func convertKg(_ sender: Any) {
-        guard let value: String = kgValue.text! else{
-            print("Guard ==========")
-           return
+        if let value = kgValue.text, !(kgValue.text?.isEmpty)! {
+            gramValue.text = String(format: "%.4f", Double(value)! * 1000)
+            ouncesValue.text = String(format: "%.4f", Double(value)! * 35.274)
+            poundsValue.text = String(format: "%.4f", Double(value)! * 2.205)
+            stonePoundsValue.text = String(format: "%.4f", Double(value)! / 6.35)
+        } else {
+            clearData()
         }
-        gramValue.text = String(format: "%.4f", Double(value)! * 1000)
-        ouncesValue.text = String(format: "%.4f", Double(value)! * 35.274)
-        poundsValue.text = String(format: "%.4f", Double(value)! * 2.205)
-        stonePoundsValue.text = String(format: "%.4f", Double(value)! / 6.35)
-        
     }
     @IBAction func convertGrams(_ sender: Any) {
-        kgValue.text = String(format: "%.4f", Double(gramValue.text!)! / 1000)
-        ouncesValue.text = String(format: "%.4f", Double(gramValue.text!)! / 28.35)
-        poundsValue.text = String(format: "%.4f", Double(gramValue.text!)!  / 453.592)
-        stonePoundsValue.text = String(format: "%.4f", Double(gramValue.text!)! / 6350.293)
+        if let value = gramValue.text, !(gramValue.text?.isEmpty)! {
+            kgValue.text = String(format: "%.4f", Double(gramValue.text!)! / 1000)
+            ouncesValue.text = String(format: "%.4f", Double(gramValue.text!)! / 28.35)
+            poundsValue.text = String(format: "%.4f", Double(gramValue.text!)!  / 453.592)
+            stonePoundsValue.text = String(format: "%.4f", Double(gramValue.text!)! / 6350.293)
+        }else{
+            clearData()
+        }
     }
     
     @IBAction func convertOunces(_ sender: Any) {
-        kgValue.text = String(format: "%.4f", Double(ouncesValue.text!)! / 35.274)
-        gramValue.text = String(format: "%.4f", Double(ouncesValue.text!)! * 28.35)
-        poundsValue.text = String(format: "%.4f", Double(ouncesValue.text!)!  / 16.0)
-        stonePoundsValue.text = String(format: "%.4f", Double(ouncesValue.text!)! / 224.0)
+         if let value = ouncesValue.text, !(ouncesValue.text?.isEmpty)! {
+                kgValue.text = String(format: "%.4f", Double(ouncesValue.text!)! / 35.274)
+                gramValue.text = String(format: "%.4f", Double(ouncesValue.text!)! * 28.35)
+                poundsValue.text = String(format: "%.4f", Double(ouncesValue.text!)!  / 16.0)
+                stonePoundsValue.text = String(format: "%.4f", Double(ouncesValue.text!)! / 224.0)
+         }else{
+            clearData()
+        }
         
     }
     
     @IBAction func convertPounds(_ sender: Any) {
-        kgValue.text = String(format: "%.4f", Double(poundsValue.text!)! / 2.205)
-        gramValue.text = String(format: "%.4f", Double(poundsValue.text!)! * 453.592)
-        ouncesValue.text = String(format: "%.4f", Double(poundsValue.text!)!  * 16.0)
-        stonePoundsValue.text = String(format: "%.4f", Double(poundsValue.text!)! / 14.0)
+       if let value = poundsValue.text, !(poundsValue.text?.isEmpty)! {
+            kgValue.text = String(format: "%.4f", Double(poundsValue.text!)! / 2.205)
+            gramValue.text = String(format: "%.4f", Double(poundsValue.text!)! * 453.592)
+            ouncesValue.text = String(format: "%.4f", Double(poundsValue.text!)!  * 16.0)
+            stonePoundsValue.text = String(format: "%.4f", Double(poundsValue.text!)! / 14.0)
+       }else{
+            clearData()
+        }
     }
     
     @IBAction func convertStonePounds(_ sender: Any) {
-        kgValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 6.35)
-        gramValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 6350.293)
-        ouncesValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)!  * 224.0)
-        poundsValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 14.0)
+        if let value = stonePoundsValue.text, !(stonePoundsValue.text?.isEmpty)! {
+            kgValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 6.35)
+            gramValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 6350.293)
+            ouncesValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)!  * 224.0)
+            poundsValue.text = String(format: "%.4f", Double(stonePoundsValue.text!)! * 14.0)
+        }else{
+            clearData()
+        }
     }
     
     
@@ -92,9 +98,6 @@ class SecondViewController: UIViewController {
         checkArrList()
         let value:String = "\(kgValue.text!)kg=\(gramValue.text!)g=\(ouncesValue.text!)ounces=\(poundsValue.text!)pounds=\(stonePoundsValue.text!)stones"
         GlobalVar.GlobalArr.arr.append(value)
-    }
-    
-    
-    
 }
 
+}

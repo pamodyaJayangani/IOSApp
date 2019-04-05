@@ -42,42 +42,69 @@ class SixthViewController: UIViewController {
     
     @IBOutlet weak var mililiterValue: UITextField!
     
+    func clearData(){
+        gallonValue.text = ""
+        literValue.text = ""
+        ukPintValue.text = ""
+        fluidOunceValue.text = ""
+        mililiterValue.text = ""
+    }
     
     @IBAction func converGallons(_ sender: Any) {
-        literValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 3.785)
-        ukPintValue.text = String(format: "%.4f", Double(gallonValue.text!)!  * 6.661)
-        fluidOunceValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 133.228)
-        mililiterValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 3785.412)
+        if let value = gallonValue.text, !(gallonValue.text?.isEmpty)! {
+            literValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 3.785)
+            ukPintValue.text = String(format: "%.4f", Double(gallonValue.text!)!  * 6.661)
+            fluidOunceValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 133.228)
+            mililiterValue.text = String(format: "%.4f", Double(gallonValue.text!)! * 3785.412)
+        }else{
+            clearData()
+        }
     }
     
     
     @IBAction func convertLiter(_ sender: Any) {
-        gallonValue.text = String(format: "%.4f", Double(literValue.text!)! / 4.546)
-        ukPintValue.text = String(format: "%.4f", Double(literValue.text!)!  * 1.76)
-        fluidOunceValue.text = String(format: "%.4f", Double(literValue.text!)! * 33.814)
-        mililiterValue.text = String(format: "%.4f", Double(literValue.text!)! * 1000.0)
+        if let value = literValue.text, !(literValue.text?.isEmpty)! {
+            gallonValue.text = String(format: "%.4f", Double(literValue.text!)! / 4.546)
+            ukPintValue.text = String(format: "%.4f", Double(literValue.text!)!  * 1.76)
+            fluidOunceValue.text = String(format: "%.4f", Double(literValue.text!)! * 33.814)
+            mililiterValue.text = String(format: "%.4f", Double(literValue.text!)! * 1000.0)
+        }else{
+            clearData()
+        }
     }
     
     @IBAction func convertUkPint(_ sender: Any) {
-        gallonValue.text = String(format: "%.4f", Double(ukPintValue.text!)! / 8.0)
-        literValue.text = String(format: "%.4f", Double(ukPintValue.text!)!  / 1.76)
-        fluidOunceValue.text = String(format: "%.4f", Double(ukPintValue.text!)! * 20)
-        mililiterValue.text = String(format: "%.4f", Double(ukPintValue.text!)! * 568.261)
+        if let value = ukPintValue.text, !(ukPintValue.text?.isEmpty)! {
+            gallonValue.text = String(format: "%.4f", Double(ukPintValue.text!)! / 8.0)
+            literValue.text = String(format: "%.4f", Double(ukPintValue.text!)!  / 1.76)
+            fluidOunceValue.text = String(format: "%.4f", Double(ukPintValue.text!)! * 20)
+            mililiterValue.text = String(format: "%.4f", Double(ukPintValue.text!)! * 568.261)
+        }else{
+            clearData()
+        }
     }
     
     
     @IBAction func convertFluidOunce(_ sender: Any) {
-        gallonValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! / 160.0)
-        literValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)!  / 35.195)
-        ukPintValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! / 20)
-        mililiterValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! * 28.413)
+        if let value = fluidOunceValue.text, !(fluidOunceValue.text?.isEmpty)! {
+            gallonValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! / 160.0)
+            literValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)!  / 35.195)
+            ukPintValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! / 20)
+            mililiterValue.text = String(format: "%.4f", Double(fluidOunceValue.text!)! * 28.413)
+        }else{
+            clearData()
+        }
     }
     
     @IBAction func convertMililiter(_ sender: Any) {
-        gallonValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 4546.09)
-        literValue.text = String(format: "%.4f", Double(mililiterValue.text!)!  / 1000.0)
-        ukPintValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 568.261)
-        fluidOunceValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 28.413)
+        if let value = mililiterValue.text, !(mililiterValue.text?.isEmpty)! {
+            gallonValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 4546.09)
+            literValue.text = String(format: "%.4f", Double(mililiterValue.text!)!  / 1000.0)
+            ukPintValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 568.261)
+            fluidOunceValue.text = String(format: "%.4f", Double(mililiterValue.text!)! / 28.413)
+        }else{
+            clearData()
+        }
         
     }
     

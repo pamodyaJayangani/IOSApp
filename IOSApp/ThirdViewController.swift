@@ -32,21 +32,39 @@ class ThirdViewController: UIViewController {
     
     @IBOutlet weak var kelvinValue: UITextField!
     
+    func clearData(){
+        celciusValue.text = ""
+        farenheitValue.text = ""
+        kelvinValue.text = ""
+        
+    }
     
     @IBAction func convertCelcius(_ sender: Any) {
-        farenheitValue.text = String(format: "%.4f", (Double(celciusValue.text!)! * 9/5) + 32)
-        kelvinValue.text = String(format: "%.4f", Double(celciusValue.text!)! + 273.15)
+        if let value = celciusValue.text, !(celciusValue.text?.isEmpty)! {
+            farenheitValue.text = String(format: "%.4f", (Double(celciusValue.text!)! * 9/5) + 32)
+            kelvinValue.text = String(format: "%.4f", Double(celciusValue.text!)! + 273.15)
+        }else{
+            clearData()
+        }
         
     }
     
     @IBAction func convertFarenheit(_ sender: Any) {
-        celciusValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9)
-        kelvinValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9 + 273.15)
+        if let value = farenheitValue.text, !(farenheitValue.text?.isEmpty)! {
+            celciusValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9)
+            kelvinValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9 + 273.15)
+        }else{
+            clearData()
+        }
     }
     
     @IBAction func convertKelvin(_ sender: Any) {
-        celciusValue.text = String(format: "%.4f", Double(kelvinValue.text!)! - 273.15)
-        farenheitValue.text = String(format: "%.4f", (Double(kelvinValue.text!)! - 273.15) * 9/5 + 32)
+        if let value = kelvinValue.text, !(kelvinValue.text?.isEmpty)! {
+            celciusValue.text = String(format: "%.4f", Double(kelvinValue.text!)! - 273.15)
+            farenheitValue.text = String(format: "%.4f", (Double(kelvinValue.text!)! - 273.15) * 9/5 + 32)
+        }else{
+            clearData()
+        }
     }
     
     func checkArrList(){
@@ -63,7 +81,7 @@ class ThirdViewController: UIViewController {
         GlobalVar.GlobalTemp.tempArr.append(value)
     }
     
-    
-    
-    
 }
+    
+    
+
