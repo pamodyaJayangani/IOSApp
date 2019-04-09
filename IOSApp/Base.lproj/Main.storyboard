@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ConversionController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXx-JT-3kw">
-                                <rect key="frame" x="20" y="159" width="345" height="56"/>
+                                <rect key="frame" x="20" y="159" width="344" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Volume" image="liquidVol">
@@ -75,17 +75,6 @@
                                     <segue destination="z7l-O0-IZ8" kind="show" id="xdJ-gZ-Vdr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-1d-s6m">
-                                <rect key="frame" x="20" y="574" width="345" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Constatnts">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="Py4-wd-VhJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pip-m8-Ysh">
                                 <rect key="frame" x="100" y="58" width="214" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="-1655.072463768116" y="-260.49107142857144"/>
         </scene>
-        <!--Sixth View Controller-->
+        <!--Volume View Controller-->
         <scene sceneID="gJb-jn-WOg">
             <objects>
-                <viewController id="iDe-Ee-hSd" customClass="SixthViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iDe-Ee-hSd" customClass="VolumeViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hhC-ZA-kZa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +237,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="convert"/>
                                 <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="a6Z-9Y-FNt"/>
+                                    <segue destination="bNX-hf-2Lv" kind="show" id="4Bs-xg-xpY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nT-qC-akp">
@@ -323,41 +312,10 @@
             </objects>
             <point key="canvasLocation" x="-784" y="1903"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BUe-PK-Nep">
-            <objects>
-                <viewController id="6IU-li-Q1c" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uZV-XM-c9L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Constant values" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-Ai-rTc">
-                                <rect key="frame" x="60" y="61" width="285" height="541"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGj-oy-8Vx">
-                                <rect key="frame" x="146" y="610" width="101" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back2">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="0q3-Ob-jR6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="uos-2X-LoR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-cv-Xe1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1053.6231884057972" y="-332.14285714285711"/>
-        </scene>
-        <!--Fourth View Controller-->
+        <!--Length View Controller-->
         <scene sceneID="VaP-lO-ZSk">
             <objects>
-                <viewController id="Idy-Lr-hmq" customClass="FourthViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Idy-Lr-hmq" customClass="LengthViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OtN-HO-v6j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +476,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="convert"/>
                                 <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="tMa-jp-Mvi"/>
+                                    <segue destination="bNX-hf-2Lv" kind="show" id="dFT-O0-iO0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-uq-v69">
@@ -591,10 +549,10 @@
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="-743.30357142857144"/>
         </scene>
-        <!--First Table View Controller-->
+        <!--Weight Table View Controller-->
         <scene sceneID="hBL-MH-rcu">
             <objects>
-                <tableViewController id="gA0-IG-LLP" customClass="FirstTableViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gA0-IG-LLP" customClass="WeightTableViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9qY-5l-57P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,10 +584,10 @@
             </objects>
             <point key="canvasLocation" x="-3984" y="1963"/>
         </scene>
-        <!--Fifth View Controller-->
+        <!--Speed View Controller-->
         <scene sceneID="lZI-25-DDB">
             <objects>
-                <viewController id="92A-P4-ZDD" customClass="FifthViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="92A-P4-ZDD" customClass="SpeedViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrg-BL-chn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -771,7 +729,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="convert"/>
                                 <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="cJt-S3-mrh"/>
+                                    <segue destination="bNX-hf-2Lv" kind="show" id="6oR-FS-9e2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bu-4N-8fq">
@@ -842,10 +800,10 @@
             </objects>
             <point key="canvasLocation" x="2681" y="339"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Temperature View Controller-->
         <scene sceneID="bMx-2k-maf">
             <objects>
-                <viewController id="z7l-O0-IZ8" customClass="ThirdViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z7l-O0-IZ8" customClass="TemperatureViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ves-qL-cZx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -955,7 +913,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="convert"/>
                                 <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="TZk-ak-Lqc"/>
+                                    <segue destination="bNX-hf-2Lv" kind="show" id="CuV-4j-wOI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ax-OY-lU8">
@@ -1025,10 +983,37 @@
             </objects>
             <point key="canvasLocation" x="1466.6666666666667" y="1259.5982142857142"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="9vd-bX-nVZ">
+            <objects>
+                <viewController id="bNX-hf-2Lv" customClass="ConstantViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4P0-dC-kh9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Constant values" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-TJ-7MV">
+                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fnL-TJ-7MV" firstAttribute="leading" secondItem="q0d-Jn-Vty" secondAttribute="leading" constant="10" id="2FW-Rv-jjj"/>
+                            <constraint firstItem="fnL-TJ-7MV" firstAttribute="top" secondItem="q0d-Jn-Vty" secondAttribute="top" constant="10" id="RIU-VC-aMt"/>
+                            <constraint firstItem="q0d-Jn-Vty" firstAttribute="trailing" secondItem="fnL-TJ-7MV" secondAttribute="trailing" constant="10" id="pkE-HY-92Y"/>
+                            <constraint firstItem="q0d-Jn-Vty" firstAttribute="bottom" secondItem="fnL-TJ-7MV" secondAttribute="bottom" constant="10" id="zSC-U2-SGB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q0d-Jn-Vty"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ht6-au-LbC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xK-dg-UeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3476" y="991"/>
+        </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="WeightViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1178,7 +1163,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="convert"/>
                                 <connections>
-                                    <segue destination="6IU-li-Q1c" kind="show" id="ti6-7Y-zoY"/>
+                                    <segue destination="bNX-hf-2Lv" kind="show" id="ggZ-yv-Z04"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-sg-W1E">
@@ -1223,23 +1208,22 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="bNX-hf-2Lv" kind="relationship" relationship="viewControllers" id="cdb-bT-Rtm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2764" y="44"/>
+            <point key="canvasLocation" x="-3212" y="-115"/>
         </scene>
     </scenes>
     <resources>
         <image name="Constant values" width="483" height="586.5"/>
         <image name="Kg_weight 50p" width="50" height="50"/>
-        <image name="back2" width="72" height="72"/>
-        <image name="bottom-back_icon-icons.com_54050" width="96" height="96"/>
+        <image name="bottom-back_icon-icons.com_54050" width="41.25" height="41.25"/>
         <image name="convert" width="25" height="25"/>
-        <image name="distance icon 50p" width="50" height="50"/>
+        <image name="distance icon 50p" width="45" height="45"/>
         <image name="first" width="30" height="30"/>
-        <image name="history-512" width="25" height="25"/>
+        <image name="history-512" width="90" height="90"/>
         <image name="liquidVol" width="50" height="50"/>
         <image name="saveIocn" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
@@ -1247,12 +1231,11 @@
         <image name="temperature 50p" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WXD-sv-zQs"/>
-        <segue reference="Hw3-rs-ADD"/>
-        <segue reference="657-V7-xBl"/>
-        <segue reference="iYO-jS-7QD"/>
-        <segue reference="Py4-wd-VhJ"/>
-        <segue reference="Rfj-x3-f6D"/>
-        <segue reference="0q3-Ob-jR6"/>
+        <segue reference="iBO-Ws-cEU"/>
+        <segue reference="dFT-O0-iO0"/>
+        <segue reference="MCc-fp-3XX"/>
+        <segue reference="ahQ-gq-eXc"/>
+        <segue reference="Fkr-vm-kNp"/>
+        <segue reference="W38-yo-zhS"/>
     </inferredMetricsTieBreakers>
 </document>
