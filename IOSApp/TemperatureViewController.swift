@@ -12,26 +12,14 @@ class TemperatureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBOutlet weak var celciusValue: UITextField!
-    
     @IBOutlet weak var farenheitValue: UITextField!
-    
     @IBOutlet weak var kelvinValue: UITextField!
     
+    /* Clear empty values */
     func clearData(){
         celciusValue.text = ""
         farenheitValue.text = ""
@@ -39,8 +27,9 @@ class TemperatureViewController: UIViewController {
         
     }
     
+    /* Convert Temperature */
     @IBAction func convertCelcius(_ sender: Any) {
-        if let value = celciusValue.text, !(celciusValue.text?.isEmpty)! {
+        if let _ = celciusValue.text, !(celciusValue.text?.isEmpty)! {
             farenheitValue.text = String(format: "%.4f", (Double(celciusValue.text!)! * 9/5) + 32)
             kelvinValue.text = String(format: "%.4f", Double(celciusValue.text!)! + 273.15)
         }else{
@@ -50,7 +39,7 @@ class TemperatureViewController: UIViewController {
     }
     
     @IBAction func convertFarenheit(_ sender: Any) {
-        if let value = farenheitValue.text, !(farenheitValue.text?.isEmpty)! {
+        if let _ = farenheitValue.text, !(farenheitValue.text?.isEmpty)! {
             celciusValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9)
             kelvinValue.text = String(format: "%.4f", (Double(farenheitValue.text!)! - 32) * 5/9 + 273.15)
         }else{
@@ -59,7 +48,7 @@ class TemperatureViewController: UIViewController {
     }
     
     @IBAction func convertKelvin(_ sender: Any) {
-        if let value = kelvinValue.text, !(kelvinValue.text?.isEmpty)! {
+        if let _ = kelvinValue.text, !(kelvinValue.text?.isEmpty)! {
             celciusValue.text = String(format: "%.4f", Double(kelvinValue.text!)! - 273.15)
             farenheitValue.text = String(format: "%.4f", (Double(kelvinValue.text!)! - 273.15) * 9/5 + 32)
         }else{
@@ -67,6 +56,7 @@ class TemperatureViewController: UIViewController {
         }
     }
     
+    /* Check array length */
     func checkArrList(){
 
         if(GlobalVar.GlobalTemp.tempArr.endIndex >= 5){
@@ -74,10 +64,9 @@ class TemperatureViewController: UIViewController {
         }
     }
     
-    
+    /* Save Temp Conversions */
     @IBAction func saveTemp(_ sender: Any) {
-       
-        var value: String = "\(celciusValue.text!)cel = \(farenheitValue.text!)far = \(kelvinValue.text!)K"
+       var value: String = "\(celciusValue.text!)cel = \(farenheitValue.text!)far = \(kelvinValue.text!)K"
         
         if let _ = UserDefaults.standard.array(forKey: "tempArr"),GlobalVar.GlobalTemp.tempArr.count == 0{
             for i in 0..<(UserDefaults.standard.array(forKey: "tempArr")?.count)!{

@@ -44,8 +44,9 @@ class SpeedViewController: UIViewController {
         
     }
     
+    /* Convert speed Values */
     @IBAction func convertMeterSec(_ sender: Any) {
-        if let value = meterSecValue.text, !(meterSecValue.text?.isEmpty)! {
+        if let _ = meterSecValue.text, !(meterSecValue.text?.isEmpty)! {
             kmhValue.text = String(format: "%.4f", Double(meterSecValue.text!)! * 3.6)
             milesHourValue.text = String(format: "%.4f", Double(meterSecValue.text!)!  * 2.237)
             nauticalMilesHourValue.text = String(format: "%.4f", Double(meterSecValue.text!)! * 1.944)
@@ -55,7 +56,7 @@ class SpeedViewController: UIViewController {
     }
     
     @IBAction func convertKmH(_ sender: Any) {
-        if let value = kmhValue.text, !(kmhValue.text?.isEmpty)! {
+        if let _ = kmhValue.text, !(kmhValue.text?.isEmpty)! {
             meterSecValue.text = String(format: "%.4f", Double(kmhValue.text!)! / 3.6)
             milesHourValue.text = String(format: "%.4f", Double(kmhValue.text!)!  / 1.609)
             nauticalMilesHourValue.text = String(format: "%.4f", Double(kmhValue.text!)! / 1.852)
@@ -65,7 +66,7 @@ class SpeedViewController: UIViewController {
     }
     
     @IBAction func convertMilesHour(_ sender: Any) {
-        if let value = milesHourValue.text, !(milesHourValue.text?.isEmpty)! {
+        if let _ = milesHourValue.text, !(milesHourValue.text?.isEmpty)! {
             meterSecValue.text = String(format: "%.4f", Double(milesHourValue.text!)! / 2.237)
             kmhValue.text = String(format: "%.4f", Double(milesHourValue.text!)!  * 1.609)
             nauticalMilesHourValue.text = String(format: "%.4f", Double(milesHourValue.text!)! / 1.151)
@@ -76,7 +77,7 @@ class SpeedViewController: UIViewController {
     
     
     @IBAction func convertNauMilesHour(_ sender: Any) {
-        if let value = nauticalMilesHourValue.text, !(nauticalMilesHourValue.text?.isEmpty)! {
+        if let _ = nauticalMilesHourValue.text, !(nauticalMilesHourValue.text?.isEmpty)! {
             meterSecValue.text = String(format: "%.4f", Double(nauticalMilesHourValue.text!)! / 1.944)
             kmhValue.text = String(format: "%.4f", Double(nauticalMilesHourValue.text!)!  * 1.852)
             milesHourValue.text = String(format: "%.4f", Double(nauticalMilesHourValue.text!)! * 1.852)
@@ -85,14 +86,14 @@ class SpeedViewController: UIViewController {
         }
     }
     
+    /* Check Array length */
     func checkArrList(){
-        
         if(GlobalVar.GlobalSpeed.speedArr.endIndex >= 5){
             GlobalVar.GlobalSpeed.speedArr.remove(at: 0)
         }
     }
     
-    
+    /* Save Speed */
     @IBAction func saveSpeed(_ sender: Any) {
         checkArrList()
         var value: String = "\(meterSecValue.text!)m/s = \(kmhValue.text!)km/h = \(milesHourValue.text!)mile/h = \(nauticalMilesHourValue.text!)nMile/h"
