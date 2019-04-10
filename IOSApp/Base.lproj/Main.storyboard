@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Converter-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="ConversionController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Converter" image="cubeIcon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -983,7 +983,7 @@
             </objects>
             <point key="canvasLocation" x="1466.6666666666667" y="1259.5982142857142"/>
         </scene>
-        <!--Item-->
+        <!--Constants-->
         <scene sceneID="9vd-bX-nVZ">
             <objects>
                 <viewController id="bNX-hf-2Lv" customClass="ConstantViewController" customModule="IOSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -991,24 +991,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Constant values" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-TJ-7MV">
-                                <rect key="frame" x="10" y="54" width="394" height="798"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Constant values" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-TJ-7MV">
+                                <rect key="frame" x="10" y="44" width="394" height="678"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-wh-g6J">
+                                <rect key="frame" x="184" y="895" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6o-HF-Y1F">
+                                <rect key="frame" x="150" y="813" width="114" height="72"/>
+                                <state key="normal" backgroundImage="back2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQn-Ss-lKo">
+                                <rect key="frame" x="20" y="44" width="56" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back2"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="yxG-eD-neW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="I6o-HF-Y1F" firstAttribute="leading" secondItem="q0d-Jn-Vty" secondAttribute="leading" constant="150" id="0pa-hf-bfs"/>
                             <constraint firstItem="fnL-TJ-7MV" firstAttribute="leading" secondItem="q0d-Jn-Vty" secondAttribute="leading" constant="10" id="2FW-Rv-jjj"/>
+                            <constraint firstItem="q0d-Jn-Vty" firstAttribute="trailing" secondItem="I6o-HF-Y1F" secondAttribute="trailing" constant="150" id="7BQ-FV-3cV"/>
+                            <constraint firstItem="I6o-HF-Y1F" firstAttribute="top" secondItem="fnL-TJ-7MV" secondAttribute="bottom" constant="10" id="JaT-OF-bPg"/>
                             <constraint firstItem="fnL-TJ-7MV" firstAttribute="top" secondItem="q0d-Jn-Vty" secondAttribute="top" constant="10" id="RIU-VC-aMt"/>
+                            <constraint firstItem="ee5-wh-g6J" firstAttribute="top" secondItem="fnL-TJ-7MV" secondAttribute="bottom" constant="10" id="TXN-wn-hhd"/>
+                            <constraint firstItem="q0d-Jn-Vty" firstAttribute="bottom" secondItem="fnL-TJ-7MV" secondAttribute="bottom" constant="40" id="nGE-Fl-kQy"/>
                             <constraint firstItem="q0d-Jn-Vty" firstAttribute="trailing" secondItem="fnL-TJ-7MV" secondAttribute="trailing" constant="10" id="pkE-HY-92Y"/>
+                            <constraint firstItem="ee5-wh-g6J" firstAttribute="top" secondItem="I6o-HF-Y1F" secondAttribute="bottom" constant="10" id="zIv-sP-5ih"/>
                             <constraint firstItem="q0d-Jn-Vty" firstAttribute="bottom" secondItem="fnL-TJ-7MV" secondAttribute="bottom" constant="10" id="zSC-U2-SGB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q0d-Jn-Vty"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ht6-au-LbC"/>
+                    <tabBarItem key="tabBarItem" title="Constants" image="convert" id="ht6-au-LbC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xK-dg-UeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3476" y="991"/>
+            <point key="canvasLocation" x="-3476.811594202899" y="990.40178571428567"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -1218,24 +1240,25 @@
     </scenes>
     <resources>
         <image name="Constant values" width="483" height="586.5"/>
-        <image name="Kg_weight 50p" width="50" height="50"/>
+        <image name="Kg_weight 50p" width="65.25" height="65.25"/>
+        <image name="back2" width="72" height="72"/>
         <image name="bottom-back_icon-icons.com_54050" width="41.25" height="41.25"/>
-        <image name="convert" width="25" height="25"/>
-        <image name="distance icon 50p" width="45" height="45"/>
-        <image name="first" width="30" height="30"/>
-        <image name="history-512" width="90" height="90"/>
-        <image name="liquidVol" width="50" height="50"/>
-        <image name="saveIocn" width="25" height="25"/>
+        <image name="convert" width="65.25" height="65.25"/>
+        <image name="cubeIcon" width="45" height="45"/>
+        <image name="distance icon 50p" width="144" height="144"/>
+        <image name="history-512" width="41.25" height="41.25"/>
+        <image name="liquidVol" width="65.25" height="65.25"/>
+        <image name="saveIocn" width="41.25" height="41.25"/>
         <image name="second" width="30" height="30"/>
         <image name="speedIcon" width="50" height="50"/>
         <image name="temperature 50p" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iBO-Ws-cEU"/>
-        <segue reference="dFT-O0-iO0"/>
-        <segue reference="MCc-fp-3XX"/>
-        <segue reference="ahQ-gq-eXc"/>
-        <segue reference="Fkr-vm-kNp"/>
-        <segue reference="W38-yo-zhS"/>
+        <segue reference="S1S-tE-51Y"/>
+        <segue reference="cdb-bT-Rtm"/>
+        <segue reference="xdJ-gZ-Vdr"/>
+        <segue reference="X2K-hc-zHS"/>
+        <segue reference="iYO-jS-7QD"/>
+        <segue reference="nWq-KF-Jej"/>
     </inferredMetricsTieBreakers>
 </document>
