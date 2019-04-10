@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FifthViewController: UIViewController {
+class SpeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +96,16 @@ class FifthViewController: UIViewController {
     @IBAction func saveSpeed(_ sender: Any) {
         checkArrList()
         var value: String = "\(meterSecValue.text!)m/s = \(kmhValue.text!)km/h = \(milesHourValue.text!)mile/h = \(nauticalMilesHourValue.text!)nMile/h"
+        
+        if let _ = UserDefaults.standard.array(forKey: "speedArr"), (GlobalVar.GlobalSpeed.speedArr.count == 0){
+            for i in 0..<(UserDefaults.standard.array(forKey: "speedArr")?.count)!{
+                GlobalVar.GlobalSpeed.speedArr.append(UserDefaults.standard.array(forKey: "speedArr")?[i] as! String)
+            }
+        }
+        checkArrList()
         GlobalVar.GlobalSpeed.speedArr.append(value)
+        
+        UserDefaults.standard.set(GlobalVar.GlobalSpeed.speedArr, forKey: "speedArr")
     }
 
  

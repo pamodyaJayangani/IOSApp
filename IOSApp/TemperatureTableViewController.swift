@@ -32,7 +32,7 @@ class TemperatureTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return GlobalVar.GlobalTemp.tempArr.count
+        return (UserDefaults.standard.array(forKey: "tempArr")?.count)!
     }
 
     
@@ -40,7 +40,7 @@ class TemperatureTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 2
-        cell.textLabel?.text = GlobalVar.GlobalTemp.tempArr[indexPath.row]
+        cell.textLabel?.text = UserDefaults.standard.array(forKey: "tempArr")?[indexPath.row] as! String
 
         return cell
     }

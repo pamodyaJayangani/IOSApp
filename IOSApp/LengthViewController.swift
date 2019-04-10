@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FourthViewController: UIViewController {
+class LengthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,9 +131,17 @@ class FourthViewController: UIViewController {
     }
     
     @IBAction func saveLength(_ sender: Any) {
-        checkArrList()
+        
         var value: String = "\(meterValue.text!)m = \(mileValue.text!)mile = \(centimeterValue.text!)cm = \(milimeterValue.text!)mm = \(yardValue.text!)yard = \(inchValue.text!)inch"
+        
+        if let _ = UserDefaults.standard.array(forKey: "lengArr"), (GlobalVar.GlobalLength.lengArr.count == 0){
+            for i in 0..<(UserDefaults.standard.array(forKey: "lengArr")?.count)!{
+                GlobalVar.GlobalLength.lengArr.append(UserDefaults.standard.array(forKey: "lengArr")?[i] as! String)
+            }
+        }
+        checkArrList()
         GlobalVar.GlobalLength.lengArr.append(value)
+        UserDefaults.standard.set(GlobalVar.GlobalLength.lengArr, forKey: "lengArr")
     }
     
 

@@ -33,7 +33,7 @@ class VolumeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return GlobalVar.GlobalVolume.volumeArr.count
+        return (UserDefaults.standard.array(forKey: "volumeArr")?.count)!
     }
 
     
@@ -41,7 +41,7 @@ class VolumeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 2
-        cell.textLabel?.text = GlobalVar.GlobalVolume.volumeArr[indexPath.row]
+        cell.textLabel?.text = UserDefaults.standard.array(forKey: "volumeArr")?[indexPath.row] as! String
 
         return cell
     }

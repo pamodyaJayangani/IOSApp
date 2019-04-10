@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController  {
+class WeightTableViewController: UITableViewController  {
     
     let cellName:String = "LabelCell";
     
@@ -35,7 +35,7 @@ class FirstTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         print("Rows -------------")
-        return GlobalVar.GlobalArr.arr.count
+        return (UserDefaults.standard.array(forKey: "Arr")?.count)!
     }
 
     
@@ -44,8 +44,7 @@ class FirstTableViewController: UITableViewController  {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 2
-        cell.textLabel?.text = GlobalVar.GlobalArr.arr[indexPath.row]
-       
+        cell.textLabel?.text = UserDefaults.standard.array(forKey: "Arr")?[indexPath.row] as! String
         return cell
     }
 

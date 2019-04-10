@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SixthViewController: UIViewController {
+class VolumeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,8 +117,15 @@ class SixthViewController: UIViewController {
 
     
     @IBAction func saveVolume(_ sender: Any) {
-        checkArrList()
         var value: String = "\(gallonValue.text!)gal = \(literValue.text!)l = \(ukPintValue.text!)pint = \(fluidOunceValue.text!)ounces = \(mililiterValue.text!)ml"
+        
+        if let _ = UserDefaults.standard.array(forKey: "volumeArr"), (GlobalVar.GlobalVolume.volumeArr.count == 0){
+            for i in 0..<(UserDefaults.standard.array(forKey: "volumeArr")?.count)!{
+                GlobalVar.GlobalVolume.volumeArr.append(UserDefaults.standard.array(forKey: "volumeArr")?[i] as! String)
+            }
+        }
+        checkArrList()
         GlobalVar.GlobalVolume.volumeArr.append(value)
+        UserDefaults.standard.set(GlobalVar.GlobalVolume.volumeArr, forKey: "volumeArr")
     }
 }

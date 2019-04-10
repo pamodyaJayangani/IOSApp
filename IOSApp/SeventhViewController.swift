@@ -12,11 +12,11 @@ class SeventhViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        valKg.text = SecondViewController.GlobalVar.arr[0]
-        valGrams.text = SecondViewController.GlobalVar.arr[1]
-        valOunces.text = SecondViewController.GlobalVar.arr[2]
-        valPounds.text = SecondViewController.GlobalVar.arr[3]
-        valStone.text = SecondViewController.GlobalVar.arr[4]
+        valKg.text = GlobalVar.GlobalArr.arr[0]
+        valGrams.text = GlobalVar.GlobalArr.arr[1]
+        valOunces.text = GlobalVar.GlobalArr.arr[2]
+        valPounds.text = GlobalVar.GlobalArr.arr[3]
+        valStone.text = GlobalVar.GlobalArr.arr[4]
         // Do any additional setup after loading the view.
     }
     
@@ -43,8 +43,8 @@ class SeventhViewController: UIViewController {
 //        valKg.text = SecondViewController.GlobalVar.arr[0]
 //    }
     func showKg(){
-        print("=========\(SecondViewController.GlobalVar.arr[0])")
-        valKg.text = SecondViewController.GlobalVar.arr[0]
+        print("=========\(GlobalVar.GlobalArr.arr[0])")
+        valKg.text = GlobalVar.GlobalArr.arr[0]
     }
     
     

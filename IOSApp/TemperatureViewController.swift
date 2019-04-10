@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class TemperatureViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,9 +76,18 @@ class ThirdViewController: UIViewController {
     
     
     @IBAction func saveTemp(_ sender: Any) {
-        checkArrList()
+       
         var value: String = "\(celciusValue.text!)cel = \(farenheitValue.text!)far = \(kelvinValue.text!)K"
+        
+        if let _ = UserDefaults.standard.array(forKey: "tempArr"),GlobalVar.GlobalTemp.tempArr.count == 0{
+            for i in 0..<(UserDefaults.standard.array(forKey: "tempArr")?.count)!{
+                GlobalVar.GlobalTemp.tempArr.append(UserDefaults.standard.array(forKey: "tempArr")?[i] as! String)
+            }
+        }
+        
+        checkArrList()
         GlobalVar.GlobalTemp.tempArr.append(value)
+        UserDefaults.standard.set(GlobalVar.GlobalTemp.tempArr, forKey: "tempArr")
     }
     
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class GlobalVar{
     struct GlobalArr{
-        static var arr: [String] = []
+       static var arr: [String] = []
     }
     struct GlobalTemp{
         static var tempArr: [String] = []
@@ -24,5 +24,5 @@ class GlobalVar{
     struct GlobalVolume{
         static var volumeArr: [String] = []
     }
-    
+
 }

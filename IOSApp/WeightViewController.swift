@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WeightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,8 @@ class SecondViewController: UIViewController {
     }
     
     func checkArrList(){
-        print("######### \(GlobalVar.GlobalArr.arr.endIndex)")
         if(GlobalVar.GlobalArr.arr.endIndex >= 5){
-            print("***********^^^^^\(GlobalVar.GlobalArr.arr[0]) ")
+
             GlobalVar.GlobalArr.arr.remove(at: 0)
         }
     }
@@ -95,9 +94,18 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func saveKg(_ sender: Any) {
-        checkArrList()
+        
         let value:String = "\(kgValue.text!)kg=\(gramValue.text!)g=\(ouncesValue.text!)ounces=\(poundsValue.text!)pounds=\(stonePoundsValue.text!)stones"
+        
+                if let _ = UserDefaults.standard.array(forKey: "Arr"), (GlobalVar.GlobalArr.arr.count == 0){
+                    for i in 0..<(UserDefaults.standard.array(forKey: "Arr")?.count)!{
+                        GlobalVar.GlobalArr.arr.append(UserDefaults.standard.array(forKey: "Arr")?[i] as! String)
+                    }
+                }
+        checkArrList()
         GlobalVar.GlobalArr.arr.append(value)
+        UserDefaults.standard.set(GlobalVar.GlobalArr.arr, forKey: "Arr")
+        
 }
 
 }

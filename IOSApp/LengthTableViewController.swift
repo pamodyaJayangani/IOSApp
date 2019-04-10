@@ -33,7 +33,7 @@ class LengthTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return GlobalVar.GlobalLength.lengArr.count
+        return (UserDefaults.standard.array(forKey: "lengArr")?.count)!
     }
 
     
@@ -41,7 +41,7 @@ class LengthTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 3
-        cell.textLabel?.text = GlobalVar.GlobalLength.lengArr[indexPath.row]
+        cell.textLabel?.text = UserDefaults.standard.array(forKey: "lengArr")?[indexPath.row] as! String
 
         return cell
     }
