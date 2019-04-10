@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3F7F67225CA8B600472622 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F7F66225CA8B500472622 /* WeightViewController.swift */; };
+		4F3F7F6D225DB58900472622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDF224DDC7B00F3E3C3 /* LaunchScreen.storyboard */; };
+		4F3F7F6E225DB59100472622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDA224DDC7900F3E3C3 /* Main.storyboard */; };
+		4F3F7F6F225DB59400472622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */; };
 		4F7DDEFC225C79F300432795 /* ConstantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DDEFB225C79F300432795 /* ConstantViewController.swift */; };
 		4FEFDCD5224DDC7900F3E3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCD4224DDC7900F3E3C3 /* AppDelegate.swift */; };
-		4FEFDCD7224DDC7900F3E3C3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCD6224DDC7900F3E3C3 /* FirstViewController.swift */; };
-		4FEFDCD9224DDC7900F3E3C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCD8224DDC7900F3E3C3 /* SecondViewController.swift */; };
-		4FEFDCDC224DDC7900F3E3C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDA224DDC7900F3E3C3 /* Main.storyboard */; };
-		4FEFDCDE224DDC7B00F3E3C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */; };
-		4FEFDCE1224DDC7B00F3E3C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FEFDCDF224DDC7B00F3E3C3 /* LaunchScreen.storyboard */; };
+		4FEFDCD7224DDC7900F3E3C3 /* ConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCD6224DDC7900F3E3C3 /* ConversionController.swift */; };
 		4FEFDCEC224DDC7B00F3E3C3 /* IOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCEB224DDC7B00F3E3C3 /* IOSAppTests.swift */; };
-		4FEFDCF7224DECCC00F3E3C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */; };
-		4FEFDCF9224DF2DA00F3E3C3 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */; };
-		4FEFDCFB224DFB3000F3E3C3 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */; };
-		4FEFDCFD224E060400F3E3C3 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */; };
-		4FEFDD03224F0FCE00F3E3C3 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */; };
+		4FEFDCF7224DECCC00F3E3C3 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF6224DECCC00F3E3C3 /* TemperatureViewController.swift */; };
+		4FEFDCF9224DF2DA00F3E3C3 /* LengthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCF8224DF2DA00F3E3C3 /* LengthViewController.swift */; };
+		4FEFDCFB224DFB3000F3E3C3 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFA224DFB3000F3E3C3 /* SpeedViewController.swift */; };
+		4FEFDCFD224E060400F3E3C3 /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDCFC224E060400F3E3C3 /* VolumeViewController.swift */; };
+		4FEFDD03224F0FCE00F3E3C3 /* WeightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD02224F0FCE00F3E3C3 /* WeightTableViewController.swift */; };
 		4FEFDD05225332DF00F3E3C3 /* GlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */; };
 		4FEFDD0922537B2B00F3E3C3 /* TemperatureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */; };
 		4FEFDD0B2253C37900F3E3C3 /* LengthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */; };
@@ -62,11 +62,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F3F7F66225CA8B500472622 /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		4F7DDEFB225C79F300432795 /* ConstantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantViewController.swift; sourceTree = "<group>"; };
 		4FEFDCD1224DDC7900F3E3C3 /* IOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEFDCD4224DDC7900F3E3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FEFDCD6224DDC7900F3E3C3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4FEFDCD8224DDC7900F3E3C3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4FEFDCD6224DDC7900F3E3C3 /* ConversionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionController.swift; sourceTree = "<group>"; };
 		4FEFDCDB224DDC7900F3E3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FEFDCE0224DDC7B00F3E3C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,11 +74,11 @@
 		4FEFDCE7224DDC7B00F3E3C3 /* IOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FEFDCEB224DDC7B00F3E3C3 /* IOSAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppTests.swift; sourceTree = "<group>"; };
 		4FEFDCED224DDC7C00F3E3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
-		4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
+		4FEFDCF6224DECCC00F3E3C3 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		4FEFDCF8224DF2DA00F3E3C3 /* LengthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthViewController.swift; sourceTree = "<group>"; };
+		4FEFDCFA224DFB3000F3E3C3 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
+		4FEFDCFC224E060400F3E3C3 /* VolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
+		4FEFDD02224F0FCE00F3E3C3 /* WeightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightTableViewController.swift; sourceTree = "<group>"; };
 		4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVar.swift; sourceTree = "<group>"; };
 		4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTableViewController.swift; sourceTree = "<group>"; };
 		4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthTableViewController.swift; sourceTree = "<group>"; };
@@ -139,17 +139,17 @@
 			isa = PBXGroup;
 			children = (
 				4FEFDCD4224DDC7900F3E3C3 /* AppDelegate.swift */,
-				4FEFDCD6224DDC7900F3E3C3 /* FirstViewController.swift */,
-				4FEFDCD8224DDC7900F3E3C3 /* SecondViewController.swift */,
+				4FEFDCD6224DDC7900F3E3C3 /* ConversionController.swift */,
+				4F3F7F66225CA8B500472622 /* WeightViewController.swift */,
 				4FEFDCDA224DDC7900F3E3C3 /* Main.storyboard */,
 				4FEFDCDD224DDC7B00F3E3C3 /* Assets.xcassets */,
 				4FEFDCDF224DDC7B00F3E3C3 /* LaunchScreen.storyboard */,
 				4FEFDCE2224DDC7B00F3E3C3 /* Info.plist */,
-				4FEFDCF6224DECCC00F3E3C3 /* ThirdViewController.swift */,
-				4FEFDCF8224DF2DA00F3E3C3 /* FourthViewController.swift */,
-				4FEFDCFA224DFB3000F3E3C3 /* FifthViewController.swift */,
-				4FEFDCFC224E060400F3E3C3 /* SixthViewController.swift */,
-				4FEFDD02224F0FCE00F3E3C3 /* FirstTableViewController.swift */,
+				4FEFDCF6224DECCC00F3E3C3 /* TemperatureViewController.swift */,
+				4FEFDCF8224DF2DA00F3E3C3 /* LengthViewController.swift */,
+				4FEFDCFA224DFB3000F3E3C3 /* SpeedViewController.swift */,
+				4FEFDCFC224E060400F3E3C3 /* VolumeViewController.swift */,
+				4FEFDD02224F0FCE00F3E3C3 /* WeightTableViewController.swift */,
 				4FEFDD04225332DF00F3E3C3 /* GlobalVar.swift */,
 				4FEFDD0822537B2B00F3E3C3 /* TemperatureTableViewController.swift */,
 				4FEFDD0A2253C37900F3E3C3 /* LengthTableViewController.swift */,
@@ -283,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEFDCE1224DDC7B00F3E3C3 /* LaunchScreen.storyboard in Resources */,
-				4FEFDCDE224DDC7B00F3E3C3 /* Assets.xcassets in Resources */,
-				4FEFDCDC224DDC7900F3E3C3 /* Main.storyboard in Resources */,
+				4F3F7F6F225DB59400472622 /* Assets.xcassets in Resources */,
+				4F3F7F6E225DB59100472622 /* Main.storyboard in Resources */,
+				4F3F7F6D225DB58900472622 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,17 +312,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FEFDD05225332DF00F3E3C3 /* GlobalVar.swift in Sources */,
-				4FEFDCFB224DFB3000F3E3C3 /* FifthViewController.swift in Sources */,
-				4FEFDCFD224E060400F3E3C3 /* SixthViewController.swift in Sources */,
-				4FEFDD03224F0FCE00F3E3C3 /* FirstTableViewController.swift in Sources */,
+				4FEFDCFB224DFB3000F3E3C3 /* SpeedViewController.swift in Sources */,
+				4FEFDCFD224E060400F3E3C3 /* VolumeViewController.swift in Sources */,
+				4F3F7F67225CA8B600472622 /* WeightViewController.swift in Sources */,
+				4FEFDD03224F0FCE00F3E3C3 /* WeightTableViewController.swift in Sources */,
 				4FEFDD0D2253C7CB00F3E3C3 /* SpeedTableViewController.swift in Sources */,
-				4FEFDCD9224DDC7900F3E3C3 /* SecondViewController.swift in Sources */,
 				4F7DDEFC225C79F300432795 /* ConstantViewController.swift in Sources */,
 				4FEFDD0F2253CEC300F3E3C3 /* VolumeTableViewController.swift in Sources */,
 				4FEFDCD5224DDC7900F3E3C3 /* AppDelegate.swift in Sources */,
-				4FEFDCF7224DECCC00F3E3C3 /* ThirdViewController.swift in Sources */,
-				4FEFDCD7224DDC7900F3E3C3 /* FirstViewController.swift in Sources */,
-				4FEFDCF9224DF2DA00F3E3C3 /* FourthViewController.swift in Sources */,
+				4FEFDCF7224DECCC00F3E3C3 /* TemperatureViewController.swift in Sources */,
+				4FEFDCD7224DDC7900F3E3C3 /* ConversionController.swift in Sources */,
+				4FEFDCF9224DF2DA00F3E3C3 /* LengthViewController.swift in Sources */,
 				4FEFDD0922537B2B00F3E3C3 /* TemperatureTableViewController.swift in Sources */,
 				4FEFDD0B2253C37900F3E3C3 /* LengthTableViewController.swift in Sources */,
 			);

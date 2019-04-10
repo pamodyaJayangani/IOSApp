@@ -50,7 +50,7 @@ class LengthViewController: UIViewController {
     
     
     @IBAction func convertMeter(_ sender: Any) {
-        if let value = meterValue.text, !(meterValue.text?.isEmpty)! {
+        if let _ = meterValue.text, !(meterValue.text?.isEmpty)!{
             mileValue.text = String(format: "%.4f", Double(meterValue.text!)! / 1609.344)
             centimeterValue.text = String(format: "%.4f", Double(meterValue.text!)!  * 100.0)
             milimeterValue.text = String(format: "%.4f", Double(meterValue.text!)! * 1000.0)
@@ -62,7 +62,7 @@ class LengthViewController: UIViewController {
     }
     
     @IBAction func convertMile(_ sender: Any) {
-        if let value = mileValue.text, !(mileValue.text?.isEmpty)! {
+        if let _ = mileValue.text, !(mileValue.text?.isEmpty)! {
             meterValue.text = String(format: "%.4f", Double(mileValue.text!)! * 1609.344)
             centimeterValue.text = String(format: "%.4f", Double(mileValue.text!)!  * 160934.4)
             milimeterValue.text = String(format: "%.4f", Double(mileValue.text!)! * 1609344.4)
@@ -76,7 +76,7 @@ class LengthViewController: UIViewController {
     
     
     @IBAction func convertCemtimeter(_ sender: Any) {
-        if let value = centimeterValue.text, !(centimeterValue.text?.isEmpty)! {
+        if let _ = centimeterValue.text, !(centimeterValue.text?.isEmpty)! {
             meterValue.text = String(format: "%.4f", Double(centimeterValue.text!)! / 100)
             mileValue.text = String(format: "%.4f", Double(centimeterValue.text!)!  / 160934.4)
             milimeterValue.text = String(format: "%.4f", Double(centimeterValue.text!)! * 10)
@@ -89,7 +89,7 @@ class LengthViewController: UIViewController {
     
     
     @IBAction func convertMilimeter(_ sender: Any) {
-        if let value = milimeterValue.text, !(milimeterValue.text?.isEmpty)! {
+        if let _ = milimeterValue.text, !(milimeterValue.text?.isEmpty)! {
             meterValue.text = String(format: "%.4f", Double(milimeterValue.text!)! / 1000)
             mileValue.text = String(format: "%.4f", Double(milimeterValue.text!)!  / 1609344.4)
             centimeterValue.text = String(format: "%.4f", Double(milimeterValue.text!)! / 10)
@@ -101,7 +101,7 @@ class LengthViewController: UIViewController {
     }
     
     @IBAction func convertYard(_ sender: Any) {
-        if let value = yardValue.text, !(yardValue.text?.isEmpty)! {
+        if let _ = yardValue.text, !(yardValue.text?.isEmpty)! {
             meterValue.text = String(format: "%.4f", Double(yardValue.text!)! / 1.094)
             mileValue.text = String(format: "%.4f", Double(yardValue.text!)!  / 1760)
             centimeterValue.text = String(format: "%.4f", Double(yardValue.text!)! * 91.44)
@@ -113,7 +113,7 @@ class LengthViewController: UIViewController {
     }
     
     @IBAction func convertInch(_ sender: Any) {
-        if let value = inchValue.text, !(inchValue.text?.isEmpty)! {
+        if let _ = inchValue.text, !(inchValue.text?.isEmpty)! {
             meterValue.text = String(format: "%.4f", Double(inchValue.text!)! / 39.37)
             mileValue.text = String(format: "%.4f", Double(inchValue.text!)!  / 63360)
             centimeterValue.text = String(format: "%.4f", Double(inchValue.text!)! * 2.54)
